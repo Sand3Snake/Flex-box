@@ -10,11 +10,16 @@
   <style>
     .flex {
       display: flex;
-      justify-content: space-between;
+      flex-direction: row;
+      align-items: baseline;
     }
 
-    .flex .item {
-      height: 100px;
+    .flex .item:nth-of-type(1) {
+      font-size: 15rem;
+    }
+
+    .flex .item:nth-of-type(3) {
+      font-size: 20rem;
     }
   </style>
 </head>
@@ -25,8 +30,6 @@
     <div class="item">1</div>
     <div class="item">2</div>
     <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">4</div>
   </main>
 
 </body>
