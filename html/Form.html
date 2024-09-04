@@ -2,25 +2,142 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário Completo</title>
 </head>
 <body>
     <form>
-        <label for="nome">Nome
-            <input id="nome" type="text">
-        </label><br><br>
-        <label for="email">Email
-            <input id="email" type="email" required>
-        </label><br><br>
-        <label>Escolha o valor do seu salario</label><br>
-        <input type="radio" id="salario1" nome="salario" value="10.000">R10.000<br>
-        <input type="radio" id="salario2" nome="salario" value="15.000">R15.000<br>
-        <input type="radio" id="salario3" nome="salario" value="20.000">R20.000<br>
-        <input type="radio" id="salario4" nome="salario" value="25.000">R25.000<br>
-        <br>
-        <button>Enviar</button>
+        <!-- Campo de texto -->
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome caralho"><!--input e uma tag versatil-->
+        </div><br>
+
+        <!-- Campo de senha -->
+        <div>
+            <label for="senha">Senha:</label><!--label e um titulo ds conponetes label descreve o input-->
+            <input type="password" id="senha" name="senha" required><!--precisa esta preenchido para ir para o proximo-->
+        </div><br>
+
+        <!-- Campo de email -->
+        <div>
+            <label for="email">Email:</label><!--valida email-->
+            <input type="email" id="email" name="email" placeholder="Email.AquiP0rra@gmail.com">
+        </div><br>
+
+        <!-- Campo de URL -->
+        <div>
+            <label for="website">Website:</label><!--somente permite url de um site não tem validação-->
+            <input type="url" id="website" name="website" placeholder="https://www.exemplo.com">
+        </div><br>
+
+        <!-- Campo de número -->
+        <div>
+            <label for="idade">Idade:</label><!--ele valida o numero-->
+            <input type="number" id="idade" name="idade" min="1" max="120">
+        </div><br>
+
+        <!-- Campo de telefone -->
+        <div>
+            <label for="telefone">Telefone:</label><!--não valida numero de telefone -->
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX">
+        </div><br>
+
+        <!-- Campo de data -->
+        <div>
+            <label for="data">Data:</label><!--valida data -->
+            <input type="date" id="data" name="data">
+        </div><br>
+
+        <!-- Campo de hora -->
+        <div>
+            <label for="hora">Hora:</label><!--valida horario-->
+            <input type="time" id="hora" name="hora">
+        </div><br>
+
+        <!-- Campo de mês -->
+        <div>
+            <label for="mes">Mês:</label><!--valida mes e ano -->
+            <input type="month" id="mes" name="mes">
+        </div><br>
+
+        <!-- Campo de semana -->
+        <div>
+            <label for="semana">Semana:</label><!--valida semana-->
+            <input type="week" id="semana" name="semana">
+        </div><br>
+
+        <!-- Campo de busca -->
+        <div>
+            <label for="busca">Busca:</label><!--campo de pesquisa-->
+            <input type="search" id="busca" name="busca">
+        </div><br>
+
+        <!-- Campo de intervalo -->
+        <div>
+            <label for="range">Intervalo:</label><!--limita um intervalo igual um nivek de satisfação-->
+            <input type="range" id="range" name="range" min="0" max="100">
+        </div><br>
+
+        <!-- Radio buttons -->
+        <div>
+            <label>Selecione um preço:</label><br><!--somente seleciona 1  obrigatoriamente tem que ter o mesmo nome-->
+            <label><input type="radio" id="preco1" name="preco" value="150">R$150,00</label><br>
+            <label><input type="radio" id="preco2" name="preco" value="200">R$200,00</label><br>
+            <label><input type="radio" id="preco3" name="preco" value="250">R$250,00</label><br>
+        </div><br>
+
+        <!-- Checkboxes -->
+        <div><!--img e input meta e br não tem fechamento -->
+            <label>Selecione opções:</label><br><!--escolhe mais de uma opção tambem conhecido como dropdown-->
+            <label><input type="checkbox" id="opcao1" name="opcoes" value="opcao1">Opção 1</label><br>
+            <label><input type="checkbox" id="opcao2" name="opcoes" value="opcao2">Opção 2</label><br>
+            <label><input type="checkbox" id="opcao3" name="opcoes" value="opcao3">Opção 3</label><br>
+        </div><br>
+
+        <!-- Lista suspensa -->
+        <div><!--seleciona opção-->
+            <label for="estado">Selecione o estado:</label><br>
+            <select id="estado" name="estado">
+                <option value="RJ" selected>RIO DE JANEIRO</option>
+                <option value="SP">SÃO PAULO</option>
+                <option value="BA">BAHIA</option>
+                <option value="CE">CEARÁ</option>
+            </select>
+        </div><br>
+
+        <!-- Campo de seleção de arquivo -->
+        <div><!--abre apasta de arquivos / e consegue levar um tipo exepexifico como execel etc-->
+            <label for="arquivo">Envie um arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo" multiple>
+        </div><br>
+
+        <!-- Campo oculto e usado para modal como id -->
+        <input type="hidden" id="token" name="token" value="12345">
+
+        <!-- Campo de cor -->
+        <div><!--seleciona uma cor exemplo o canvas -->
+            <label for="cor">Escolha uma cor:</label>
+            <input type="color" id="cor" name="cor">
+        </div><br>
+
+        <!-- Área de texto -->
+        <div><!--text area como comentario-->
+            <label for="comentario">Digite seu comentário:</label><br>
+            <textarea id="comentario" name="comentario" cols="30" rows="10"></textarea>
+        </div><br>
+
+        <!-- Campo de redefinição -->
+        <div><!--limpa os campos e redefine o formulario -->
+            <button type="reset">Redefinir</button>
+        </div><br>
+
+        <!-- Campo de envio -->
+        <div><!--envia para o banco de dados mas ele e bem restrito -->
+            <button type="submit">Enviar formulário</button>
+        </div>
     </form>
 </body>
+</html>
+
 </html>
